@@ -48,19 +48,21 @@ public class Puffenduj extends Hogwarts {
     }
 
     public static void isTheBestInFaculty(Puffenduj firstStudent, Puffenduj secondStudent) {
-        int pointsOfFirstStudent = firstStudent.getIndustriousness() + firstStudent.getFaithfulness() +
-                firstStudent.getHonesty();
-        int pointsOfSecondStudent = secondStudent.getIndustriousness() + secondStudent.getFaithfulness() +
-                secondStudent.getHonesty();
-        if (pointsOfFirstStudent > pointsOfSecondStudent) {
-            System.out.println(firstStudent.getFullName() + " - лучший Пуффендуец, чем " +
-                    secondStudent.getFullName() + ".");
-        } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
-            System.out.println(secondStudent.getFullName() + " - лучший Пуффендуец, чем " +
-                    firstStudent.getFullName() + ".");
-        } else {
-            System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
-                    " - равные в Пуффендуе.");
+        if (firstStudent != null && secondStudent != null) {
+            int pointsOfFirstStudent = firstStudent.getIndustriousness() + firstStudent.getFaithfulness() +
+                    firstStudent.getHonesty();
+            int pointsOfSecondStudent = secondStudent.getIndustriousness() + secondStudent.getFaithfulness() +
+                    secondStudent.getHonesty();
+            if (pointsOfFirstStudent > pointsOfSecondStudent) {
+                System.out.println(firstStudent.getFullName() + " - лучший Пуффендуец, чем " +
+                        secondStudent.getFullName() + ".");
+            } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
+                System.out.println(secondStudent.getFullName() + " - лучший Пуффендуец, чем " +
+                        firstStudent.getFullName() + ".");
+            } else {
+                System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
+                        " - равные в Пуффендуе.");
+            }
         }
     }
 }

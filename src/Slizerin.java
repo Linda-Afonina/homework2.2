@@ -70,19 +70,21 @@ public class Slizerin extends Hogwarts {
     }
 
     public static void isTheBestInFaculty(Slizerin firstStudent, Slizerin secondStudent) {
-        int pointsOfFirstStudent = firstStudent.getTrick() + firstStudent.getDetermination() +
-                firstStudent.getAmbition() + firstStudent.getResourcefulness() + firstStudent.getDomineering();
-        int pointsOfSecondStudent = secondStudent.getTrick() + secondStudent.getDetermination() +
-                secondStudent.getAmbition() + secondStudent.getResourcefulness() + secondStudent.getDomineering();
-        if (pointsOfFirstStudent > pointsOfSecondStudent) {
-            System.out.println(firstStudent.getFullName() + " - лучший Слизеринец, чем " +
-                    secondStudent.getFullName() + ".");
-        } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
-            System.out.println(secondStudent.getFullName() + " - лучший Слизеринец, чем " +
-                    firstStudent.getFullName() + ".");
-        } else {
-            System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
-                    " - равные в Слизерине.");
+        if (firstStudent != null && secondStudent != null) {
+            int pointsOfFirstStudent = firstStudent.getTrick() + firstStudent.getDetermination() +
+                    firstStudent.getAmbition() + firstStudent.getResourcefulness() + firstStudent.getDomineering();
+            int pointsOfSecondStudent = secondStudent.getTrick() + secondStudent.getDetermination() +
+                    secondStudent.getAmbition() + secondStudent.getResourcefulness() + secondStudent.getDomineering();
+            if (pointsOfFirstStudent > pointsOfSecondStudent) {
+                System.out.println(firstStudent.getFullName() + " - лучший Слизеринец, чем " +
+                        secondStudent.getFullName() + ".");
+            } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
+                System.out.println(secondStudent.getFullName() + " - лучший Слизеринец, чем " +
+                        firstStudent.getFullName() + ".");
+            } else {
+                System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
+                        " - равные в Слизерине.");
+            }
         }
     }
 }

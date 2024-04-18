@@ -46,17 +46,19 @@ public class Griffindor extends Hogwarts {
     }
 
     public static void isTheBestInFaculty(Griffindor firstStudent, Griffindor secondStudent) {
-        int pointsOfFirstStudent = firstStudent.getBravery() + firstStudent.getHonor() + firstStudent.getNobility();
-        int pointsOfSecondStudent = secondStudent.getBravery() + secondStudent.getHonor() + secondStudent.getNobility();
-        if (pointsOfFirstStudent > pointsOfSecondStudent) {
-            System.out.println(firstStudent.getFullName() + " - лучший Гриффиндорец, чем " +
-                    secondStudent.getFullName() + ".");
-        } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
-            System.out.println(secondStudent.getFullName() + " - лучший Гриффиндорец, чем " +
-                    firstStudent.getFullName() + ".");
-        } else {
-            System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
-                    " - равные в Гриффиндоре.");
+        if (firstStudent != null && secondStudent != null) {
+            int pointsOfFirstStudent = firstStudent.getBravery() + firstStudent.getHonor() + firstStudent.getNobility();
+            int pointsOfSecondStudent = secondStudent.getBravery() + secondStudent.getHonor() + secondStudent.getNobility();
+            if (pointsOfFirstStudent > pointsOfSecondStudent) {
+                System.out.println(firstStudent.getFullName() + " - лучший Гриффиндорец, чем " +
+                        secondStudent.getFullName() + ".");
+            } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
+                System.out.println(secondStudent.getFullName() + " - лучший Гриффиндорец, чем " +
+                        firstStudent.getFullName() + ".");
+            } else {
+                System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
+                        " - равные в Гриффиндоре.");
+            }
         }
     }
 }

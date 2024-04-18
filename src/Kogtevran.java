@@ -58,19 +58,21 @@ public class Kogtevran extends Hogwarts {
     }
 
     public static void isTheBestInFaculty(Kogtevran firstStudent, Kogtevran secondStudent) {
-        int pointsOfFirstStudent = firstStudent.getMind() + firstStudent.getWise() + firstStudent.getHumor() +
-                firstStudent.getCreative();
-        int pointsOfSecondStudent = secondStudent.getMind() + secondStudent.getWise() + secondStudent.getHumor() +
-                secondStudent.getCreative();
-        if (pointsOfFirstStudent > pointsOfSecondStudent) {
-            System.out.println(firstStudent.getFullName() + " - лучший Когтевранец, чем " +
-                    secondStudent.getFullName() + ".");
-        } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
-            System.out.println(secondStudent.getFullName() + " - лучший Когтевранец, чем " +
-                    firstStudent.getFullName() + ".");
-        } else {
-            System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
-                    " - равные в Когтевране.");
+        if (firstStudent != null && secondStudent != null) {
+            int pointsOfFirstStudent = firstStudent.getMind() + firstStudent.getWise() + firstStudent.getHumor() +
+                    firstStudent.getCreative();
+            int pointsOfSecondStudent = secondStudent.getMind() + secondStudent.getWise() + secondStudent.getHumor() +
+                    secondStudent.getCreative();
+            if (pointsOfFirstStudent > pointsOfSecondStudent) {
+                System.out.println(firstStudent.getFullName() + " - лучший Когтевранец, чем " +
+                        secondStudent.getFullName() + ".");
+            } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
+                System.out.println(secondStudent.getFullName() + " - лучший Когтевранец, чем " +
+                        firstStudent.getFullName() + ".");
+            } else {
+                System.out.println(secondStudent.getFullName() + " и " + firstStudent.getFullName() +
+                        " - равные в Когтевране.");
+            }
         }
     }
 }

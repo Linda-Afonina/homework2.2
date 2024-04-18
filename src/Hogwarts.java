@@ -33,16 +33,18 @@ public abstract class Hogwarts {
     public abstract String toString();
 
     public static void isTheBestInHogwarts(Hogwarts firstStudent, Hogwarts secondStudent) {
-        int pointsOfFirstStudent = firstStudent.getPowerOfMagic() + firstStudent.getTransgressionDistance();
-        int pointsOfSecondStudent = secondStudent.getPowerOfMagic() + secondStudent.getTransgressionDistance();
-        if (pointsOfFirstStudent > pointsOfSecondStudent) {
-            System.out.println(firstStudent.getFullName() + " обладает большей мощностью магии, чем " +
-                    secondStudent.getFullName() + ".");
-        } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
-            System.out.println(secondStudent.getFullName() + " обладает большей мощностью магии, чем " +
-                    firstStudent.getFullName() + ".");
-        } else {
-            System.out.println("Они равны по силе магии");
+        if (firstStudent != null && secondStudent != null) {
+            int pointsOfFirstStudent = firstStudent.getPowerOfMagic() + firstStudent.getTransgressionDistance();
+            int pointsOfSecondStudent = secondStudent.getPowerOfMagic() + secondStudent.getTransgressionDistance();
+            if (pointsOfFirstStudent > pointsOfSecondStudent) {
+                System.out.println(firstStudent.getFullName() + " обладает большей мощностью магии, чем " +
+                        secondStudent.getFullName() + ".");
+            } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
+                System.out.println(secondStudent.getFullName() + " обладает большей мощностью магии, чем " +
+                        firstStudent.getFullName() + ".");
+            } else {
+                System.out.println("Они равны по силе магии");
+            }
         }
     }
 }
