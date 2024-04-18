@@ -32,10 +32,6 @@ public abstract class Hogwarts {
 
     public abstract String toString();
 
-    public abstract boolean equals(Object otherStudent);
-
-    public abstract int hashCode();
-
     public static void isTheBestInHogwarts(Hogwarts firstStudent, Hogwarts secondStudent) {
         int pointsOfFirstStudent = firstStudent.getPowerOfMagic() + firstStudent.getTransgressionDistance();
         int pointsOfSecondStudent = secondStudent.getPowerOfMagic() + secondStudent.getTransgressionDistance();

@@ -45,20 +45,6 @@ public class Griffindor extends Hogwarts {
                 ", храбрость = " + bravery + '.';
     }
 
-    @Override
-    public boolean equals(Object otherStudent) {
-        if (otherStudent == null || this.getClass() != otherStudent.getClass()) {
-            return false;
-        }
-        Griffindor student = (Griffindor) otherStudent;
-        return getFullName().equals(student.getFullName());
-    }
-
-    @Override
-    public int hashCode() {
-        return java.util.Objects.hash(getFullName());
-    }
-
     public static void isTheBestInFaculty(Griffindor firstStudent, Griffindor secondStudent) {
         int pointsOfFirstStudent = firstStudent.getBravery() + firstStudent.getHonor() + firstStudent.getNobility();
         int pointsOfSecondStudent = secondStudent.getBravery() + secondStudent.getHonor() + secondStudent.getNobility();
