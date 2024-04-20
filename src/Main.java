@@ -2,61 +2,65 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Описание студентов:");
-        Griffindor[] studentsOfGriffindor = new Griffindor[3];
-        studentsOfGriffindor[0] = new Griffindor("Гарри Поттер", (byte) 90, (byte) 45, (byte) 78, (byte) 56, (byte) 66);
-        studentsOfGriffindor[1] = new Griffindor("Гермиона Грейнджер", (byte) 46, (byte) 30, (byte) 72, (byte) 90, (byte) 80);
-        studentsOfGriffindor[2] = new Griffindor("Рон Уизли", (byte) 16, (byte) 50, (byte) 60, (byte) 52, (byte) 86);
-        Griffindor garri = studentsOfGriffindor[0];
-        Griffindor germiona = studentsOfGriffindor[1];
-        Griffindor ron = studentsOfGriffindor[2];
-        System.out.println(garri);
-        System.out.println(germiona);
-        System.out.println(ron);
+        Griffindor garriPotter = new Griffindor("Гарри Поттер", 90, 45, 
+                78, 56, 66);
+        Griffindor germionaGreindzher = new Griffindor("Гермиона Грейнджер", 46,
+                30, 72, 90, 80);
+        Griffindor ronUizli = new Griffindor("Рон Уизли", 16, 50, 60,
+                52, 86);
+        System.out.println(garriPotter);
+        System.out.println(germionaGreindzher);
+        System.out.println(ronUizli);
 
-        Kogtevran[] studentsOfKogtevran = new Kogtevran[3];
-        studentsOfKogtevran[0] = new Kogtevran("Чжоу Чанг", (byte) 48, (byte) 75, (byte) 20, (byte) 68, (byte) 33, (byte) 44);
-        studentsOfKogtevran[1] = new Kogtevran("Падма Патил", (byte) 67, (byte) 90, (byte) 23, (byte) 80, (byte) 44, (byte) 55);
-        studentsOfKogtevran[2] = new Kogtevran("Маркус Белби", (byte) 64, (byte) 80, (byte) 41, (byte) 85, (byte) 11, (byte) 56);
-        Kogtevran chzhou = studentsOfKogtevran[0];
-        Kogtevran padma = studentsOfKogtevran[1];
-        Kogtevran markus = studentsOfKogtevran[2];
-        System.out.println(chzhou);
-        System.out.println(padma);
-        System.out.println(markus);
+        Kogtevran chzhouChang = new Kogtevran("Чжоу Чанг", 48, 75, 20,
+                68, 33, 44);
+        Kogtevran padmaPatil = new Kogtevran("Падма Патил", 67, 90, 23,
+                80, 44, 55);
+        Kogtevran markusBelbi = new Kogtevran("Маркус Белби", 64, 80, 41,
+                85, 11, 56);
+        System.out.println(chzhouChang);
+        System.out.println(padmaPatil);
+        System.out.println(markusBelbi);
 
-        Slizerin[] studentsOfSlizerin = new Slizerin[3];
-        studentsOfSlizerin[0] = new Slizerin("Драко Малфой", (byte) 45, (byte) 65, (byte) 64, (byte) 78, (byte) 23, (byte) 41, (byte) 78);
-        studentsOfSlizerin[1] = new Slizerin("Грэхэм Монтегю", (byte) 56, (byte) 60, (byte) 90, (byte) 77, (byte) 45, (byte) 78, (byte) 60);
-        studentsOfSlizerin[2] = new Slizerin("Грегори Гойл", (byte) 78, (byte) 33, (byte) 80, (byte) 70, (byte) 54, (byte) 77, (byte) 62);
-        Slizerin drako = studentsOfSlizerin[0];
-        Slizerin grehem = studentsOfSlizerin[1];
-        Slizerin gregori = studentsOfSlizerin[2];
-        System.out.println(drako);
-        System.out.println(grehem);
-        System.out.println(gregori);
+        Slizerin drakoMalfoi = new Slizerin("Драко Малфой", 45, 65, 64,
+                78, 23, 41, 78);
+        Slizerin grehemMontegu = new Slizerin("Грэхэм Монтегю", 56, 60, 90,
+                77, 45, 78, 60);
+        Slizerin gregoriGoil = new Slizerin("Грегори Гойл", 78, 33, 80,
+                70, 54, 77, 62);
+        System.out.println(drakoMalfoi);
+        System.out.println(grehemMontegu);
+        System.out.println(gregoriGoil);
 
-        Puffenduj[] studentsOfPuffenduj = new Puffenduj[3];
-        studentsOfPuffenduj[0] = new Puffenduj("Захария Смит", (byte) 45, (byte) 56, (byte) 78, (byte) 91, (byte) 44);
-        studentsOfPuffenduj[1] = new Puffenduj("Седрик Диггори", (byte) 55, (byte) 28, (byte) 55, (byte) 66, (byte) 51);
-        studentsOfPuffenduj[2] = new Puffenduj("Джастин Финч-Флетчли", (byte) 61, (byte) 40, (byte) 71, (byte) 65, (byte) 71);
-        Puffenduj zahariya = studentsOfPuffenduj[0];
-        Puffenduj sedrik = studentsOfPuffenduj[1];
-        Puffenduj justin = studentsOfPuffenduj[2];
-        System.out.println(zahariya);
-        System.out.println(sedrik);
-        System.out.println(justin);
+        Puffenduj zahariyaSmit = new Puffenduj("Захария Смит", 45, 56,
+                78, 91, 44);
+        Puffenduj sedrikDiggori = new Puffenduj("Седрик Диггори", 55, 28,
+                55, 66, 51);
+        Puffenduj justinFinchFletchli = new Puffenduj("Джастин Финч-Флетчли", 61,
+                40, 71, 65, 71);
+        System.out.println(zahariyaSmit);
+        System.out.println(sedrikDiggori);
+        System.out.println(justinFinchFletchli);
 
 
         System.out.println("Лучший на факультете:");
-        Griffindor.isTheBestInFaculty(garri, ron);
-        Kogtevran.isTheBestInFaculty(padma, chzhou);
-        Slizerin.isTheBestInFaculty(grehem, gregori);
-        Puffenduj.isTheBestInFaculty(zahariya, sedrik);
+//        Griffindor.isTheBestInFaculty(garriPotter, ronUizli);
+//        Kogtevran.isTheBestInFaculty(padmaPatil, chzhouChang);
+//        Slizerin.isTheBestInFaculty(grehemMontegu, gregoriGoil);
+//        Puffenduj.isTheBestInFaculty(zahariyaSmit, sedrikDiggori);
+        garriPotter.isTheBestInFaculty(ronUizli);
+        padmaPatil.isTheBestInFaculty(chzhouChang);
+        grehemMontegu.isTheBestInFaculty(gregoriGoil);
+        zahariyaSmit.isTheBestInFaculty(sedrikDiggori);
 
         System.out.println("Лучший в Хогвартсе:");
-        Hogwarts.isTheBestInHogwarts(grehem, ron);
-        Hogwarts.isTheBestInHogwarts(padma, germiona);
-        Hogwarts.isTheBestInHogwarts(drako, justin);
-        Hogwarts.isTheBestInHogwarts(markus, zahariya);
+//        Hogwarts.isTheBestInHogwarts(grehemMontegu, ronUizli);
+//        Hogwarts.isTheBestInHogwarts(padmaPatil, germionaGreindzher);
+//        Hogwarts.isTheBestInHogwarts(drakoMalfoi, justinFinchFletchli);
+//        Hogwarts.isTheBestInHogwarts(markusBelbi, zahariyaSmit);
+        grehemMontegu.isTheBestInHogwarts(ronUizli);
+        padmaPatil.isTheBestInHogwarts(germionaGreindzher);
+        drakoMalfoi.isTheBestInHogwarts(justinFinchFletchli);
+        markusBelbi.isTheBestInHogwarts(zahariyaSmit);
     }
 }

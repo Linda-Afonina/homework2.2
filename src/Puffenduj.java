@@ -1,58 +1,49 @@
 public class Puffenduj extends Hogwarts {
 
-    private byte industriousness;
-    private byte faithfulness;
-    private byte honesty;
+    private int industriousness;
+    private int faithfulness;
+    private int honesty;
 
-    public Puffenduj(String fullName, byte powerOfMagic, byte transgressionDistance,
-                     byte industriousness, byte faithfulness, byte honesty) {
+    public Puffenduj(String fullName, int powerOfMagic, int transgressionDistance,
+                     int industriousness, int faithfulness, int honesty) {
         super(fullName, powerOfMagic, transgressionDistance);
         this.industriousness = industriousness;
         this.faithfulness = faithfulness;
         this.honesty = honesty;
     }
 
-    public byte getIndustriousness() {
+    public int getIndustriousness() {
         return this.industriousness;
     }
 
-    public void setIndustriousness(byte industriousness) {
-        this.industriousness = industriousness;
-    }
-
-    public byte getFaithfulness() {
+    public int getFaithfulness() {
         return this.faithfulness;
     }
 
-    public void setFaithfulness(byte faithfulness) {
-        this.faithfulness = faithfulness;
-    }
-
-    public byte getHonesty() {
+    public int getHonesty() {
         return this.honesty;
-    }
-
-    public void setHonesty(byte honesty) {
-        this.honesty = honesty;
     }
 
     @Override
     public String toString() {
-        return "Ученик Пуффендуя - " + getFullName() +
-                ", сила магии = " + getPowerOfMagic() +
-                ", расстояние трансгрессии = " + getTransgressionDistance() +
+        return "Ученик Пуффендуя - " + fullName +
+                ", сила магии = " + powerOfMagic +
+                ", расстояние трансгрессии = " + transgressionDistance +
                 ", хитрость = " + industriousness +
                 ", решительность = " + faithfulness +
                 ", амбициозность = " + honesty +
                 '.';
     }
 
+    @Override
+    public int calculatePoints() {
+        return industriousness + faithfulness + honesty;
+    }
+
     public static void isTheBestInFaculty(Puffenduj firstStudent, Puffenduj secondStudent) {
         if (firstStudent != null && secondStudent != null) {
-            int pointsOfFirstStudent = firstStudent.getIndustriousness() + firstStudent.getFaithfulness() +
-                    firstStudent.getHonesty();
-            int pointsOfSecondStudent = secondStudent.getIndustriousness() + secondStudent.getFaithfulness() +
-                    secondStudent.getHonesty();
+            int pointsOfFirstStudent = firstStudent.calculatePoints();
+            int pointsOfSecondStudent = secondStudent.calculatePoints();
             if (pointsOfFirstStudent > pointsOfSecondStudent) {
                 System.out.println(firstStudent.getFullName() + " - лучший Пуффендуец, чем " +
                         secondStudent.getFullName() + ".");

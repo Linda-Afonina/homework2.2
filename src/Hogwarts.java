@@ -1,50 +1,67 @@
 public abstract class Hogwarts {
 
-    private final String fullName;
-    private byte powerOfMagic;
-    private byte transgressionDistance;
+    protected final String fullName;
+    protected int powerOfMagic;
+    protected int transgressionDistance;
 
-    public Hogwarts(String fullName, byte powerOfMagic, byte transgressionDistance) {
+    public Hogwarts(String fullName, int powerOfMagic, int transgressionDistance) {
         this.fullName = fullName;
         this.powerOfMagic = powerOfMagic;
         this.transgressionDistance = transgressionDistance;
     }
 
+
     public String getFullName() {
         return this.fullName;
     }
 
-    public byte getPowerOfMagic() {
+    public int getPowerOfMagic() {
         return this.powerOfMagic;
     }
 
-    public void setPowerOfMagic(byte powerOfMagic) {
-        this.powerOfMagic = powerOfMagic;
-    }
-
-    public byte getTransgressionDistance() {
+    public int getTransgressionDistance() {
         return this.transgressionDistance;
-    }
-
-    public void setTransgressionDistance(byte transgressionDistance) {
-        this.transgressionDistance = transgressionDistance;
     }
 
     public abstract String toString();
 
-    public static void isTheBestInHogwarts(Hogwarts firstStudent, Hogwarts secondStudent) {
-        if (firstStudent != null && secondStudent != null) {
-            int pointsOfFirstStudent = firstStudent.getPowerOfMagic() + firstStudent.getTransgressionDistance();
-            int pointsOfSecondStudent = secondStudent.getPowerOfMagic() + secondStudent.getTransgressionDistance();
-            if (pointsOfFirstStudent > pointsOfSecondStudent) {
-                System.out.println(firstStudent.getFullName() + " обладает большей мощностью магии, чем " +
-                        secondStudent.getFullName() + ".");
-            } else if (pointsOfFirstStudent < pointsOfSecondStudent) {
-                System.out.println(secondStudent.getFullName() + " обладает большей мощностью магии, чем " +
-                        firstStudent.getFullName() + ".");
+    public abstract int calculatePoints();
+
+    public int calculateBasicPoints() {
+        return powerOfMagic + transgressionDistance;
+    }
+
+    public void isTheBestInHogwarts(Hogwarts student) {
+        if (student != null) {
+            int sum1 = calculateBasicPoints();
+            int sum2 = student.calculateBasicPoints();
+            if (sum1 > sum2) {
+                System.out.println(fullName + " обладает большей мощностью магии, чем " +
+                        student.fullName + ".");
+            } else if (sum1 < sum2) {
+                System.out.println(student.fullName + " обладает большей мощностью магии, чем " +
+                        fullName + ".");
             } else {
-                System.out.println("Они равны по силе магии");
+                System.out.println("Они равны по силе.");
             }
+        }
+    }
+
+    public void isTheBestInFaculty(Hogwarts student) {
+        if (student != null && student.getClass() == getClass()) {
+            int sum1 = calculatePoints(); //абстрактный метод, без тела. При вызове будет использован метод того класса, который нужен (объект которого используется)
+            int sum2 = student.calculatePoints();
+            if (sum1 > sum2) {
+                System.out.println(fullName + " лучше на факультете, чем " +
+                        student.fullName + ".");
+            } else if (sum1 < sum2) {
+                System.out.println(student.fullName + " лучше на факультете, чем " +
+                        fullName + ".");
+            } else {
+                System.out.println("Они равны по силе.");
+            }
+        } else {
+            System.out.println("Данные не корректны!");
         }
     }
 }
